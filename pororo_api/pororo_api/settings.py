@@ -131,14 +131,6 @@ STATIC_URL = '/static/'
 # VENV_PATH = os.path.dirname(BASE_DIR)
 # STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 
-CRONJOBS = [
-    ('5 0 * * *', 'search.cron.crontab_get_log_job'),
-    ('10 0 * * *', 'search.cron.crontab_model_deploy_job'),
-    ('0 1 * * *', 'search.cron.crontab_modify_model_name_job', '>> /home/data/workspace/adamas-log/pororo_api/model/model_name_job.log'),
-    ('*/1 * * * *', 'search.cron.crontab_analyze_job'),
-]
-# ('0 * * * *', 'search.cron.crontab_modify_model_name_job'), ------------> 주석처리 함.
-
 
 # '분 시 일 월 요일', 'App.file.function'
 # 분(0 - 59) 시(0 - 23) 일(1 - 31) 월(1 - 12) 요일(0 - 6) (0:일요일, 1:월요일, 2:화요일, …, 6:토요일)
