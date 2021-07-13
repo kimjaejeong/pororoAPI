@@ -2,7 +2,6 @@
 
 pororo 자연어 분석 API 개발
 
+- API 목적: 뉴스 Q&A
 
-
-- API1: 뉴스 요약 / 뉴스 카테고리 추출
-- API2: 뉴스 Q&A
+- chatbot_bert 레퍼지토리와 연계
