@@ -7,16 +7,10 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info
-    (title="Kronos log_api",
+    (title="pororo_api",
      default_version='v1',
      description=
-     '''이것은 크로노스 cpu, memory, storage, traffic 데이터
-     1. 호출 후 적재
-     2. db 검색
-     3. 업데이트
-     4. 삭제
-     5. 분석 및 mattermost 연동
-     이 가능한 api 문서입니다.''',
+     '''뉴스기사 질문 답변 생성''',
      terms_of_service="https://www.google.com/policies/terms/",),
     public=True,
     permission_classes=(permissions.AllowAny,),
