@@ -15,7 +15,7 @@ class QaAnalysisView(APIView):
 
     # 1. 크로노스 로그 데이터 검색
     # (+) 검색 후 적재
-    @swagger_auto_schema(operation_id=operation_id, operation_description=operation_description, request_body=GetLogBodySerializer)
+    @swagger_auto_schema(operation_id=operation_id, operation_description=operation_description, request_body=QaAnalysisBodySerializer)
     def post(self, request, *args, **kwargs):
         # 데이터 적재
         question = request.POST.get("question", '')
