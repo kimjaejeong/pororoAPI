@@ -26,7 +26,5 @@ class QaAnalysisView(APIView):
 
         # return JsonResponse(summary_sentence, safe=False, json_dumps_params={'ensure_ascii': True},
         #                     status=status.HTTP_201_CREATED, charset='utf-8')
-        # return JsonResponse(summary_sentence, safe=False, json_dumps_params={'ensure_ascii': True},
-        #                     status=status.HTTP_201_CREATED)
-        return HttpResponse(summary_sentence, safe=False, status=status.HTTP_201_CREATED, charset='utf-8')
-
+        # return HttpResponse(summary_sentence, safe=False, status=status.HTTP_201_CREATED, charset='utf-8')
+        return HttpResponse(summary_sentence)
