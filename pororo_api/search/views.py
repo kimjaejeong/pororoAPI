@@ -21,10 +21,10 @@ class QaAnalysisView(APIView):
         question = request.POST.get("question", '')
         original_news_data = request.POST.get("original_news_data", '')
 
-        summary_sentence = func_qa(question, original_news_data)[0]
-        print(summary_sentence)
+        answer_sentence = func_qa(question, original_news_data)[0]
+        print(answer_sentence)
 
         # return JsonResponse(summary_sentence, safe=False, json_dumps_params={'ensure_ascii': True},
         #                     status=status.HTTP_201_CREATED, charset='utf-8')
         # return HttpResponse(summary_sentence, safe=False, status=status.HTTP_201_CREATED, charset='utf-8')
-        return HttpResponse(summary_sentence)
+        return HttpResponse(answer_sentence)
