@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from rest_framework.views import APIView
 from rest_framework import status
 import sys
@@ -26,5 +26,7 @@ class QaAnalysisView(APIView):
 
         # return JsonResponse(summary_sentence, safe=False, json_dumps_params={'ensure_ascii': True},
         #                     status=status.HTTP_201_CREATED, charset='utf-8')
-        return JsonResponse(summary_sentence, safe=False, json_dumps_params={'ensure_ascii': True},
-                            status=status.HTTP_201_CREATED)
+        # return JsonResponse(summary_sentence, safe=False, json_dumps_params={'ensure_ascii': True},
+        #                     status=status.HTTP_201_CREATED)
+        return HttpResponse(summary_sentence, safe=False, status=status.HTTP_201_CREATED, charset='utf-8')
+
